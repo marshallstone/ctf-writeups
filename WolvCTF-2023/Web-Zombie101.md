@@ -1,7 +1,7 @@
 # Zombie 101
 
-## Category: Web
-## Points: 100
+### Category: Web
+### Points: 100
 
 In the challenge description we are given a link to the following website:
 
@@ -13,7 +13,6 @@ Given two input boxes for this challenge, I immediately test for a XSS vulnerabi
 in the first box and unsurprisingly, I get a pop-up with the age-old:
 ```
 <script>alert(0)</script>
-
 ```
 The second form allows you to pass a URL to the 'admin' bot, and it will visit that page. 
 The source code is given to us and we can see the restrictions of the URL we pass in:
