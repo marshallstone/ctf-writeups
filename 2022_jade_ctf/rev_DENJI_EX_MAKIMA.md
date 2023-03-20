@@ -28,11 +28,13 @@ into dnSpy, a .NET disassembler inside of my Windows 10 virtual machine.
 
 The C# code is very readable and it does not take long to find the function that encrypts the files on our operating system:
 
-`private static bool EncryptFile(string path, string encryptionExtension)`
+```C#
+private static bool EncryptFile(string path, string encryptionExtension)
+```
 
 Inside of the function I see the following lines of code:
 
-```
+```C#
 aesCryptoServiceProvider.Key = Convert.FromBase64String("OoIsAwwF32cICQoLDA0ODe==")
 aesCryptoServiceProvider.IV = new byte[]
 {
