@@ -1,17 +1,12 @@
 # keyexchange
-
 ### Category: Crypto
 ### Points: 120
 
-We get a short problem description stating:
+> Diffie-Hellman is secure right
 
-"Diffie-Hellman is secure right"
+> nc keyexchange.wolvctf.io 1337
 
-followed by a server:
-
-nc keyexchange.wolvctf.io 1337
-
-and a python script called challenge.py with the following contents:
+We are given a python script `challenge.py` with the following contents:
 
 ```python
 #!/opt/homebrew/bin/python3

@@ -10,8 +10,8 @@ In the challenge description we are given a link to the following website:
 It's also noted in the description that this challenge is a classic "steal the admin's cookie" challenge.
 
 Given two input boxes for this challenge, I immediately test for a XSS vulnerability
-in the first box and unsurprisingly, I get a pop-up with the age-old:
-```
+in the first box and unsurprisingly, I get a pop-up with:
+```html
 <script>alert(0)</script>
 ```
 The second form allows you to pass a URL to the 'admin' bot, and it will visit that page. 
@@ -64,5 +64,6 @@ Submitting this URL:
 
 Gives us the flag in the response from PostBin:
 
+```
 cookie: flag=wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261}
-
+```
